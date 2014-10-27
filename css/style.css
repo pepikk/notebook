@@ -44,6 +44,7 @@ p {
 header {
     background-image: url(../img/header.jpg);
     background-size: cover;
+    background-position: 50% 0;
     padding: 45px 0 105px;
 }
 .banner {
