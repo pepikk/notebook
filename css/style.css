@@ -2,12 +2,16 @@ body {
     background-color: #fbfbfb;
     font-family:'Lato',sans-serif;
 }
-a,a:hover,input[type="submit"]:hover,input[type="submit"],i
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+a,a:hover,input[type="submit"]:hover,input[type="submit"],i,a:after
 {
-    -moz-transition: background-color .3s ease-in,color .3s ease-in, transform .3s ease-in,border .5s ease-out;
-    -o-transition: background-color .3s ease-in,color .3s ease-in, transform .3s ease-in,border .5s ease-out;
-    -webkit-transition: background-color .3s ease-in,color .3s ease-in, transform .3s ease-in,border .5s ease-out;
-    transition: background-color .3s ease-in,color .3s ease-in, transform .3s ease-in,border .5s ease-out;
+    -moz-transition: background-color .3s ease-in,color .3s ease-in, transform .3s ease-in,width .4s ease-in;
+    -o-transition: background-color .3s ease-in,color .3s ease-in, transform .3s ease-in,width .4s ease-in;
+    -webkit-transition: background-color .3s ease-in,color .3s ease-in, transform .3s ease-in,width .4s ease-in;
+    transition: background-color .3s ease-in,color .3s ease-in, transform .3s ease-in,width .4s ease-in;
 }
 .logo{
     font-size: 40px;
@@ -106,18 +110,25 @@ header {
     color: #fff;
     font-size: 16px;
     line-height: 70px;
-    height: 60px;
+    height:70px;
     margin-right: 14px;
 
+}
+.main-menu li a:after {
+    content: '';
+    display: block;
+    width: 0;
+
+}
+.main-menu li:hover a:after {
+    border-bottom: 3px solid #fff;
+    width: 100%;
 }
 .main-menu {
     display: inline-block;
 }
 .main-menu li:last-child a {
     margin-right: 0;
-}
-.main-menu a:hover {
-    border-bottom: 3px solid #fff;
 }
 section {
     padding: 60px 0 100px;
@@ -310,7 +321,7 @@ footer .main-menu li a {
     line-height: 25px;
     
 }
-footer .main-menu li:hover a {
+footer .main-menu li:hover a:after {
     border-color: #52595D;
     border-bottom-width: 2px;
 }
